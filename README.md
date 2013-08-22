@@ -6,4 +6,4 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 2](http://irlnathan.github.io/sailscasts/blog/2013/08/21/building-a-sails-application-ep2-creating-a-sign-up-page/ "Episode 2"): Creating a Sign-up Page, ‘First-look’ at Routes, and Adding Twitter Bootstrap
  
-- [Episode 2a] (http://irlnathan.github.io/sailscasts/blog/2013/08/22/building-a-sails-application-ep2a-a-quick-supplement-to-some-stuff-i-forgot-to-mention-in-episode-2/)
+- [Episode 2a] (http://irlnathan.github.io/sailscasts/blog/2013/08/22/building-a-sails-application-ep2a-a-quick-supplement-to-some-stuff-i-forgot-to-mention-in-episode-2/): Added jquery, showed ya how to load jquery.js before bootstrap.js by changing Gruntfile.js, minor changes to layout.ejs and added a custom.less file to styles.
