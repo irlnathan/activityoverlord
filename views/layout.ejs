@@ -28,14 +28,30 @@
     -->
 
     <!--STYLES-->
-    
+    <link rel="stylesheet" href="/linker/styles/bootstrap.css">
+    <link rel="stylesheet" href="/linker/styles/custom.css">
     <!--STYLES END-->
   </head>
 
   <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/"> activityOverlord</a>
+      </div>
+    </div>
+    
     <%- body %>
 
-
+    <div class="container">
+      <hr>
+      <footer class="footer">
+        <div class="pull-right">
+          <a href="http://sailsjs.com/">sails.js</a> 
+          <div>tutorial by irl nathan, with a bunch of help from mike, cody, and zoli</div>
+        </div>
+      </footer>
+    </div>
 
     <!--
         Client-side Templates
@@ -89,6 +105,7 @@
     <script src="/linker/js/socket.io.js"></script>
     <script src="/linker/js/sails.io.js"></script>
     <script src="/linker/js/app.js"></script>
+    <script src="/linker/js/bootstrap.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
