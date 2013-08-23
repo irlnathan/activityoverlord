@@ -1,3 +1,17 @@
+/**********
+ * COLORS
+ *********/
+@white: #FFFFFF;
+@green: #9EC03B;
+@orange: #F48744;
+@blue: #189ECA;
+@gray: #777574;
+@lightGray: #ececec;
+@black: #1C1C1C;
+@darkBlue: #106E8D;
+@darkGray: #4A4A4A;   // paragraphs
+@red: #D16565; // error
+
 body {
 	padding-top: 60px;
 	padding-bottom: 40px;
@@ -16,12 +30,33 @@ body {
   color: gray;
 }
 
-.container .gray {
-	color: gray
-}
-
 .container {
   .footer {
     width: 25%;
   }
+}
+
+.form-signin {
+max-width: 30%;
+padding: 19px 29px 29px;
+margin: 0 auto 20px;
+margin-top: 20px;
+background-color: @lightGray;
+border: 1px solid @green;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+
+  h2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+}
+
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
 }
