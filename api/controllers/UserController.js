@@ -40,6 +40,8 @@ module.exports = {
 	      // After successfully creating the user
 	      // redirect to the show action
 	      res.json(user); 
+
+	      
 	  });
 	}
 };
