@@ -15,3 +15,5 @@ This is a part of a series of screencasts which build a sails application from s
 - [Episode 5] (http://localhost:4000/sailscasts/blog/2013/08/27/building-a-sails-application-ep4-handling-validation-errors-with-a-flash-message/): Handling validation errors, creating a flash message and injecting it into the sign-up page.
 
 - [Episode 6] (http://localhost:4000/sailscasts/blog/2013/08/28/building-a-sails-application-ep5-creating-a-policy-and-adding-client-side-validation/): Creating a policy and adding client-side validation to the sign-up page.
+
+- [Episode 7] (http://irlnathan.github.io/sailscasts/blog/2013/08/28/building-a-sails-application-ep7-adding-a-show-action-a-dot-k-a-a-profile-page/): Create a show action which will be our very humble profile page.
