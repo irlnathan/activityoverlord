@@ -37,4 +37,4 @@
  * http://en.wikipedia.org/wiki/Cross-site_request_forgery
  */
 
-module.exports.csrf = false;
+module.exports.csrf = true;

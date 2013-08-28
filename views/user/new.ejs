@@ -1,17 +1,36 @@
 <form action="/user/create" method="POST" class="form-signin">
 	<h2 class="form-signin-heading">Create an account</h2>
 
-	<input type="text" class="form-control" placeholder="your name" name="name">
+	<% if(flash && flash.err) { %>
+		<ul class="alert alert-success">
+	<% Object.keys(flash.err).forEach(function(error) { %>
+		<li><%- JSON.stringify(flash.err[error]) %></li>
+	<% }) %>
+	</ul>
+	<% } %>
 
+	
+	<div class="control-group">
+	<input type="text" class="form-control" placeholder="your name" name="name">
+	</div>
+
+	<div class="control-group">
 	<input type="text" class="form-control" placeholder="your title" name="title">
+	</div>
 	
+	<div class="control-group">
 	<input type="text" class="form-control" placeholder="email address" name="email">
-	
-	<input type="password" class="form-control" placeholder="password" name="password">
-	
+	</div>
+
+	<div class="control-group">
+	<input type="password" class="form-control" placeholder="password" name="password" id="password">
+	</div>
+
+	<div class="control-group">
 	<input type="password" class="form-control" placeholder="password confirmation" name="confirmation">
 	<br />
-	
+	</div>
+
 	<input type="submit" class="btn btn-lg btn-primary btn-block" value="Create Account"/>
 	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 </form>
