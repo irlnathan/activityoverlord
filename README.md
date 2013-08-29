@@ -18,5 +18,6 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 7] (http://irlnathan.github.io/sailscasts/blog/2013/08/28/building-a-sails-application-ep7-adding-a-show-action-a-dot-k-a-a-profile-page/): Create a show action which will be our very humble profile page.
 
-
 - [Episode 8] (http://irlnathan.github.io/sailscasts/blog/2013/08/28/building-a-sails-application-ep8-building-a-user-list/): You'll prevent html from being run on user generated content, create a user administrative page as well as flesh out the index, edit, and update action.
+
+- [Episode 9] (http://irlnathan.github.io/sailscasts/blog/2013/08/29/building-a-sails-application-ep9-deleting-a-user-account/): In episode 9 you'll create a delete action and implement a best practices methodolgy using a form with a hidden input field for deleting a user account.
