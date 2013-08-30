@@ -21,3 +21,8 @@ This is a part of a series of screencasts which build a sails application from s
 - [Episode 8] (http://irlnathan.github.io/sailscasts/blog/2013/08/28/building-a-sails-application-ep8-building-a-user-list/): You'll prevent html from being run on user generated content, create a user administrative page as well as flesh out the index, edit, and update action.
 
 - [Episode 9] (http://irlnathan.github.io/sailscasts/blog/2013/08/29/building-a-sails-application-ep9-deleting-a-user-account/): In episode 9 you'll create a delete action and implement a best practices methodolgy using a form with a hidden input field for deleting a user account.
+
+
+- [Episode 10] (http://irlnathan.github.io/sailscasts/blog/2013/08/30/building-a-sails-application-ep10-changing-databases-to-mongodb-with-sails-adapters/): In episode 10 you'll quickly switch out the application's underlying database to mongoDB with a few changes to the adapter configuration files.
+
+**Special Note:** I moved the adapter configuraition to local.js which is ignored by .gitignore, therefore, you'll have to make the changes specified on the video on your own.
