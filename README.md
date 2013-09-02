@@ -35,4 +35,4 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 14](http://irlnathan.github.io/sailscasts/blog/2013/09/02/building-a-sails-application-ep14-user-authentication-and-restricting-access-through-policies/): In episode 14 learn more about user authentication, creating the create and destroy actions of the session controller as well as restricting access to the application through the use of policies.
 
-- - [Episode 15](http://irlnathan.github.io/sailscasts/blog/2013/09/02/building-a-sails-application-ep15-improving-user-authenticated-navigation/): In episode 15 you’ll change the layout page to greatly improve post authentication navigation.
+- [Episode 15](http://irlnathan.github.io/sailscasts/blog/2013/09/02/building-a-sails-application-ep15-improving-user-authenticated-navigation/): In episode 15 you’ll change the layout page to greatly improve post authentication navigation.
