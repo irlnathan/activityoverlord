@@ -28,3 +28,11 @@ This is a part of a series of screencasts which build a sails application from s
 **Special Note:** I moved the adapter configuration to local.js which is ignored by .gitignore, therefore, you'll have to make the changes specified on the video on your own.
 
 - [Episode 11](http://irlnathan.github.io/sailscasts/blog/2013/08/30/building-a-sails-application-ep11-encrypting-passwords-with-bcrypt/): In episode 11 you start encrypting passwords with bcrypt.
+
+- [Episode 12](http://irlnathan.github.io/sailscasts/blog/2013/08/31/building-a-sails-application-ep12-starting-a-project-in-the-middle-using-git-clone/): In episode 12 learn how to clone the activityOverlord project, install the necessary dependencies as well as tasks to get the application up and running from the github repository.
+
+- [Episode 13](http://irlnathan.github.io/sailscasts/blog/2013/09/01/building-a-sails-application-ep13-sign-in-page/): In episode 13 learn how to create a sign-in page, create a session controller with a new action and take a relatively deep dive into understanding sessions.
+
+- [Episode 14](http://irlnathan.github.io/sailscasts/blog/2013/09/02/building-a-sails-application-ep14-user-authentication-and-restricting-access-through-policies/): In episode 14 learn more about user authentication, creating the create and destroy actions of the session controller as well as restricting access to the application through the use of policies.
+
+- - [Episode 15](http://irlnathan.github.io/sailscasts/blog/2013/09/02/building-a-sails-application-ep15-improving-user-authenticated-navigation/): In episode 15 you’ll change the layout page to greatly improve post authentication navigation.

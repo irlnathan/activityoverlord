@@ -37,7 +37,40 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="/"> activityOverlord</a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"> activityOverlord</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <% if (session.authenticated) { %>
+              <li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %> </a> </li>
+            <li><a href="/user">User Administration</a></li>
+            <li><a href="#">Placeholder2</a></li>
+            <% } %>
+          </ul>
+          <div class="navbar-right">
+            <% if (session.authenticated) { %>
+              <a class="btn btn-default navbar-btn navbar-right" href="/session/destroy">sign-out</a>
+            <% } %>
+          </div>
+          <% if (!session.authenticated) { %>
+            <form class="navbar-form navbar-right" action="/session/create">
+            <div class="form-group">
+              <input type="text" placeholder="Email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" name="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+            <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+          </form>
+          <% } %>
+        </div>
       </div>
     </div>
     
