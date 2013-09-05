@@ -35,8 +35,10 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 14](http://irlnathan.github.io/sailscasts/blog/2013/09/02/building-a-sails-application-ep14-user-authentication-and-restricting-access-through-policies/): In episode 14 learn more about user authentication, creating the create and destroy actions of the session controller as well as restricting access to the application through the use of policies.
 
+**Special Note:** There's an issue in this episode that requires one to be authenticated to create an account...oops. This issue was described in episode 16 and fixed in the Episode 16-17 commit. 
+
 - [Episode 15](http://irlnathan.github.io/sailscasts/blog/2013/09/02/building-a-sails-application-ep15-improving-user-authenticated-navigation/): In episode 15 you’ll change the layout page to greatly improve post authentication navigation.
 
-- [Episode 16]http://irlnathan.github.io/sailscasts/blog/2013/09/04/building-a-sails-application-ep16-fixing-and-issue-with-policies-from-episode-14/: you'll make a change to the policies and sign a user in when an account is created.  This will fix some stuff I forgot to do back in episode 14.
+- [Episode 16](http://irlnathan.github.io/sailscasts/blog/2013/09/04/building-a-sails-application-ep16-fixing-and-issue-with-policies-from-episode-14/): In episode 16 you'll make a change to the policies and sign a user in when an account is created.  This will fix some stuff I forgot to do back in episode 14.
 
 - [Episode 17](http://irlnathan.github.io/sailscasts/blog/2013/09/05/building-a-sails-application-ep17-creating-a-distinction-between-admin-and-regular-users/): In episode 17 you'll add a distinction between a regular user and an admin user through the use of additional policies.
