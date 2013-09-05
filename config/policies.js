@@ -18,9 +18,13 @@ module.exports.policies = {
   // (`true` allows public access) 
   '*': "flash",
 
-  user: {
+    user: {
   	'new': "flash",
-  	'*': "authenticated"
+  	create: "flash",
+  	show: "userCanSeeProfile",
+  	edit: "userCanSeeProfile",
+  	update: "userCanSeeProfile",
+  	'*': "admin"
   }
 
   /*
