@@ -27,25 +27,31 @@ module.exports = {
 	      // // If there's an error
 	      // if (err) return next(err);
 
-	      if (err) {
-	        console.log(err);
-	        req.session.flash = {
-	          err: err
-	        }
+      if (err) {
+        console.log(err);
+        req.session.flash = {
+          err: err
+        }
 
-	        // If error redirect back to sign-up page
-	        return res.redirect('/user/new');
-	      }
+        // If error redirect back to sign-up page
+        return res.redirect('/user/new');
+      }
 
-        // Log user in
-        req.session.authenticated = true;
-        req.session.User = user;
+      // Log user in
+      req.session.authenticated = true;
+      req.session.User = user;
+
+      // Change status to online
+      user.online = true;
+      user.save(function(err, user) {
+        if (err) return next(err);
 
 	      // After successfully creating the user
 	      // redirect to the show action
 	      // From ep1-6: //res.json(user); 
 
 	      res.redirect('/user/show/'+user.id);
+      });
 	  });
 	},
 

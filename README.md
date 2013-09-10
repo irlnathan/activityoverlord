@@ -46,3 +46,5 @@ This is a part of a series of screencasts which build a sails application from s
 - [Episode 18](http://irlnathan.github.io/sailscasts/blog/2013/09/06/building-a-sails-application-ep18-understanding-web-sockets-and-socket-io-including-room-creation-and-management/): In episode 18 you'll get a better understanding of how web sockets and socket.io works using a chat example incorporating the concept of rooms.
 
 **Special Note:** The repository for files used in this episode can be found at: (https://github.com/irlnathan/nodeChatSocket)
+
+- [Episode 19](http://irlnathan.github.io/sailscasts/blog/2013/09/10/building-a-sails-application-ep19-create-the-necessary-ui-and-mechanics-for-sign-in-and-sign-out-in-preparation-for-using-web-sockets/): In episode 19 you'll create the necessary ui and mechanics for sign-in and sign-out in preparation for using web sockets.
