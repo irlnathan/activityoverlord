@@ -14,18 +14,18 @@ module.exports = {
   */
 
   // This loads the sign-up page --> new.ejs
-  'new': function (req, res) {
-  	res.view();
+  'new': function(req, res) {
+    res.view();
   },
 
-  create: function (req, res, next) {
+  create: function(req, res, next) {
 
-	  // Create a User with the params sent from 
-	  // the sign-up form --> new.ejs
-	  User.create( req.params.all(), function userCreated (err, user) {
-	      
-	      // // If there's an error
-	      // if (err) return next(err);
+    // Create a User with the params sent from 
+    // the sign-up form --> new.ejs
+    User.create(req.params.all(), function userCreated(err, user) {
+
+      // // If there's an error
+      // if (err) return next(err);
 
       if (err) {
         console.log(err);
@@ -46,18 +46,25 @@ module.exports = {
       user.save(function(err, user) {
         if (err) return next(err);
 
-	      // After successfully creating the user
-	      // redirect to the show action
-	      // From ep1-6: //res.json(user); 
+        console.log("This is what user looks like after creation: ", user);
 
-	      res.redirect('/user/show/'+user.id);
+        // Let the index page know that a user was created.
+        User.publishCreate({
+          user: user
+        });
+
+        // After successfully creating the user
+        // redirect to the show action
+        // From ep1-6: //res.json(user); 
+
+        res.redirect('/user/show/' + user.id);
       });
-	  });
-	},
+    });
+  },
 
-	// render the profile view (e.g. /views/show.ejs)
-  show: function (req, res, next) {
-    User.findOne(req.param('id'), function foundUser (err, user) {
+  // render the profile view (e.g. /views/show.ejs)
+  show: function(req, res, next) {
+    User.findOne(req.param('id'), function foundUser(err, user) {
       if (err) return next(err);
       if (!user) return next();
       res.view({
@@ -66,10 +73,10 @@ module.exports = {
     });
   },
 
-  index: function (req, res, next) {
+  index: function(req, res, next) {
 
     // Get an array of all users in the User collection(e.g. table)
-    User.find(function foundUsers (err, users) {
+    User.find(function foundUsers(err, users) {
       if (err) return next(err);
       // pass the array down to the /views/index.ejs page
       res.view({
@@ -79,13 +86,13 @@ module.exports = {
   },
 
   // render the edit view (e.g. /views/edit.ejs)
-  edit: function (req, res, next) {
+  edit: function(req, res, next) {
 
     // Find the user from the id passed in via params
-    User.findOne(req.param('id'), function foundUser (err, user) {
+    User.findOne(req.param('id'), function foundUser(err, user) {
       if (err) return next(err);
       if (!user) return next('User doesn\'t exist.');
-      
+
       res.view({
         user: user
       });
@@ -93,8 +100,8 @@ module.exports = {
   },
 
   // process the info from edit view
-  update: function (req, res, next) {
-    User.update(req.param('id'), req.params.all(), function userUpdated (err) {
+  update: function(req, res, next) {
+    User.update(req.param('id'), req.params.all(), function userUpdated(err) {
       if (err) {
         return res.redirect('/user/edit/' + req.param('id'));
       }
@@ -103,9 +110,9 @@ module.exports = {
     });
   },
 
-  destroy: function (req, res, next) {
+  destroy: function(req, res, next) {
 
-    User.findOne(req.param('id'), function foundUser (err, user) {
+    User.findOne(req.param('id'), function foundUser(err, user) {
       if (err) return next(err);
 
       if (!user) return next('User doesn\'t exist.');
@@ -113,11 +120,34 @@ module.exports = {
       User.destroy(req.param('id'), function userDestroyed(err) {
         if (err) return next(err);
 
+        User.publishDestroy(user.id);
+
       });
 
-      res.redirect('/user');  
-      
+      res.redirect('/user');
+
     });
+  },
+
+  subscribe: function(req, res) {
+
+    User.find(function foundUsers(err, users) {
+      if (err) return next(err);
+
+      User.subscribe(req.socket);
+      User.subscribe(req.socket, users);
+
+
+      res.send(200);
+    });
+
+    // console.log("The requested socket is: ", req.socket.id);
+    // console.log("Making it here");
+
+    // User.subscribe(req.socket);
+    // // User.subscribe(req.socket, "5220fa7b8764043122000001");
+    // res.send(200);
+
   }
 
 };

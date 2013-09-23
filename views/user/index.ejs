@@ -35,7 +35,7 @@
 			<td><form action="/user/destroy/<%= user.id %>" method="POST">
 				<input type="hidden" name="_method" value="delete"/>
 				<input type="submit" class="btn btn-sm btn-danger" value="Delete"/>
-				<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+				<input type="hidden" class="_csrf" name="_csrf" value="<%= _csrf %>" />
 			</form></td>
 		</tr> 
 
