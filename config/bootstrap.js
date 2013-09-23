@@ -8,18 +8,36 @@
  * http://sailsjs.org/#documentation
  */
 
-module.exports.bootstrap = function (cb) {
+module.exports.bootstrap = function(cb) {
 
-  // It's very important to trigger this callack method when you are finished 
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-  User.update({}, {
-			online: false
-	}).done(function(err, users) {
-		if (err) {
-			console.log(err);
-		} else {
-			console.log("Users: ", users);
-		}
-		cb();
-	});
+	// Create admin user if one doesn't already exist
+	User.findOrCreate()
+		.where({
+			email: 'admin@activity.com'
+		})
+		.set({
+			email: 'admin@activity.com',
+			name: 'Admin',
+			admin: true,
+			password: 'abc123',
+			confirmation: 'abc123',
+		})
+		.exec(function(err, user) {
+			console.log('!!!!!', user, err);
+			if (err) return cb(err);
+
+			// It's very important to trigger this callack method when you are finished 
+			// with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
+			User.update({}, {
+				online: false
+			}).done(function(err, users) {
+				if (err) {
+					console.log(err);
+				} else {
+					console.log('Users: ', users);
+				}
+				cb(err);
+			});
+		});
+
 };

