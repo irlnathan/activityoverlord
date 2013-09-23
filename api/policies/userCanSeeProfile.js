@@ -24,6 +24,16 @@ module.exports = function(req, res, ok) {
 		req.session.flash = {
 			err: noRightsError
 		};
+
+		// If this is a JSON-wanting request
+		// (either AJAX or sockets)
+		// don't do the whole redirect/flashy thing
+		if (req.wantsJSON) {
+			res.json(403, {status: 403});
+			return;
+		}
+
+
 		res.redirect('/session/new');
 		return;
 	}
