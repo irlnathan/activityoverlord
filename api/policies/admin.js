@@ -1,7 +1,14 @@
 /**
  * Allow any authenticated user.
  */
-module.exports = function (req, res, ok) {
+module.exports = function(req, res, ok) {
+
+  sails.log.error('\n',
+    'Trying to access admin-protected page....', '\n',
+    'User id in session :: ', req.session.User && req.session.User.id, '\n',
+    'Value of `id` param :: ', req.param('id'),
+    'Destination :: ', req.url,
+    '\n');
 
   // User is allowed, proceed to controller
   if (req.session.User && req.session.User.admin) {
@@ -10,10 +17,13 @@ module.exports = function (req, res, ok) {
 
   // User is not allowed
   else {
-  	var requireAdminError = [{name: 'requireAdminError', message: 'You must be an admin.'}]
-		req.session.flash = {
-			err: requireAdminError
-		}
+    var requireAdminError = [{
+      name: 'requireAdminError',
+      message: 'You must be an admin.'
+    }];
+    req.session.flash = {
+      err: requireAdminError
+    };
     res.redirect('/session/new');
     return;
   }
