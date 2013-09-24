@@ -43,8 +43,13 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 17](http://irlnathan.github.io/sailscasts/blog/2013/09/05/building-a-sails-application-ep17-creating-a-distinction-between-admin-and-regular-users/): In episode 17 you'll add a distinction between a regular user and an admin user through the use of additional policies.
 
+- [Episode 17a](http://irlnathan.github.io/sailscasts/blog/2013/09/24/building-a-sails-application-ep17a-marshalling-request-parameters/): In episode 17a you'll fix an issue by marshalling request parameters, that allowed a user to inject html to create an admin user.
+
 - [Episode 18](http://irlnathan.github.io/sailscasts/blog/2013/09/06/building-a-sails-application-ep18-understanding-web-sockets-and-socket-io-including-room-creation-and-management/): In episode 18 you'll get a better understanding of how web sockets and socket.io works using a chat example incorporating the concept of rooms.
 
 **Special Note:** The repository for files used in this episode can be found at: (https://github.com/irlnathan/nodeChatSocket)
 
 - [Episode 19](http://irlnathan.github.io/sailscasts/blog/2013/09/10/building-a-sails-application-ep19-create-the-necessary-ui-and-mechanics-for-sign-in-and-sign-out-in-preparation-for-using-web-sockets/): In episode 19 you'll create the necessary ui and mechanics for sign-in and sign-out in preparation for using web sockets.
+
+- [Episode 20](http://irlnathan.github.io/sailscasts/blog/2013/09/15/episode-20-adding-real-time-events-to-models-in-4-lines-of-code/): In episode 20 you'll use an app to explore and understand how socket.io works within sails using a client side app that renders the majority of its views via ajax.  With four lines of code, the app monitors the user model and alerts any subscribing sockets with changes to the model.
+
