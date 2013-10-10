@@ -57,5 +57,5 @@ This is a part of a series of screencasts which build a sails application from s
 
 **Special Note:** Starting with Episode 21, you should be on sails v.0.9.7 are greater.
 
-- [Episode 22](http://irlnathan.github.io/sailscasts/blog/2013/10/10/building-a-sails-application-ep22-manipulating-the-dom-based-upon-changes-via-real-time-model-events/): In episode 21 you'll learn how to integrate socket.io and sails with custom controller actions using Real Time Model Events.
+- [Episode 22](http://irlnathan.github.io/sailscasts/blog/2013/10/10/building-a-sails-application-ep22-manipulating-the-dom-based-upon-changes-via-real-time-model-events/): In episode 22 you'll learn how to manipulate the DOM within server rendered views based upon Real Time Model Events.
 
