@@ -8,9 +8,21 @@
  * http://sailsjs.org/#documentation
  */
 
-module.exports.bootstrap = function (cb) {
+module.exports.bootstrap = function(cb) {
 
-  // It's very important to trigger this callack method when you are finished 
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-  cb();
+	// It's very important to trigger this callack method when you are finished 
+	// with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
+
+	User.update({}, {
+			online: false
+		},
+		function userUpdated(err, users) {
+			if (err) {
+				console.log(err);
+			} else {
+				// console.log(users);
+			}
+			cb();
+		}
+	)
 };

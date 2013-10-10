@@ -31,6 +31,11 @@
     <link rel="stylesheet" href="/linker/styles/bootstrap.css">
     <link rel="stylesheet" href="/linker/styles/custom.css">
     <!--STYLES END-->
+
+    <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+    <script type="text/javascript">
+      window.overlord = { csrf: "<%= _csrf %>" };
+    </script>
   </head>
 
   <body>
@@ -110,7 +115,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+    <script type="text/javascript" src="/jst.js"></script>
     <!--TEMPLATES END-->
 
 
@@ -144,6 +149,7 @@
     <script src="/linker/js/jquery.validate.min.js"></script>
     <script src="/linker/js/bootstrap.js"></script>
     <script src="/linker/js/customValidate.js"></script>
+    <script src="/linker/js/underscore.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

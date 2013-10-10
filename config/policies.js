@@ -20,6 +20,7 @@ module.exports.policies = {
 
     user: {
   	'new': "flash",
+  	subscribe: "flash",
   	create: "flash",
   	show: "userCanSeeProfile",
   	edit: "userCanSeeProfile",

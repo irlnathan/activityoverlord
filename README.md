@@ -53,3 +53,9 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 20](http://irlnathan.github.io/sailscasts/blog/2013/09/15/episode-20-adding-real-time-events-to-models-in-4-lines-of-code/): In episode 20 you'll use an app to explore and understand how socket.io works within sails using a client side app that renders the majority of its views via ajax.  With four lines of code, the app monitors the user model and alerts any subscribing sockets with changes to the model.
 
+- [Episode 21](http://irlnathan.github.io/sailscasts/blog/2013/10/10/building-a-sails-application-ep21-integrating-socket-dot-io-and-sails-with-custom-controller-actions-using-real-time-model-events/): In episode 21 you'll learn how to integrate socket.io and sails with custom controller actions using Real Time Model Events.
+
+**Special Note:** Starting with Episode 21, you should be on sails v.0.9.7 are greater.
+
+- [Episode 22](http://irlnathan.github.io/sailscasts/blog/2013/10/10/building-a-sails-application-ep22-manipulating-the-dom-based-upon-changes-via-real-time-model-events/): In episode 21 you'll learn how to integrate socket.io and sails with custom controller actions using Real Time Model Events.
+

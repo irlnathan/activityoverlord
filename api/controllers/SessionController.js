@@ -71,6 +71,12 @@ module.exports = {
 				user.save(function(err, user) {
 					if (err) return next(err);
 
+					// Inform other sockets (e.g. connected sockets that are subscribed) that this user is now logged in
+					User.publishUpdate(user.id, {
+						loggedIn: true,
+						id: user.id
+					});
+
 					// If the user is also an admin redirect to the user list (e.g. /views/user/index.ejs)
 					// This is used in conjunction with config/policies.js file
 					if (req.session.User.admin) {
@@ -96,6 +102,12 @@ module.exports = {
 				online: false
 			}, function (err) {
 				if (err) return next(err);
+
+				// Inform other sockets (e.g. connected sockets that are subscribed) that the session for this user has ended.
+				User.publishUpdate(userId, {
+					loggedIn: false,
+					id: userId
+				});
 
 				// Wipe out the session (log out)
 				req.session.destroy();
