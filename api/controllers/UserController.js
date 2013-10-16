@@ -48,6 +48,9 @@ module.exports = {
       user.save(function(err, user) {
         if (err) return next(err);
 
+      // add the action attribute to the user object for the flash message.
+      user.action = " signed-up and logged-in."
+
       // Let other subscribed sockets know that the user was created.
       User.publishCreate(user);
 
@@ -133,6 +136,12 @@ module.exports = {
 
       User.destroy(req.param('id'), function userDestroyed(err) {
         if (err) return next(err);
+
+        // Inform other sockets (e.g. connected sockets that are subscribed) that this user is now logged in
+        User.publishUpdate(user.id, {
+          name: user.name,
+          action: ' has been destroyed.'
+        });
 
         // Let other sockets know that the user instance was destroyed.
         User.publishDestroy(user.id);

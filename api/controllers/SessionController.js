@@ -74,7 +74,9 @@ module.exports = {
 					// Inform other sockets (e.g. connected sockets that are subscribed) that this user is now logged in
 					User.publishUpdate(user.id, {
 						loggedIn: true,
-						id: user.id
+						id: user.id,
+						name: user.name,
+						action: ' has logged in.'
 					});
 
 					// If the user is also an admin redirect to the user list (e.g. /views/user/index.ejs)
@@ -106,7 +108,9 @@ module.exports = {
 				// Inform other sockets (e.g. connected sockets that are subscribed) that the session for this user has ended.
 				User.publishUpdate(userId, {
 					loggedIn: false,
-					id: userId
+					id: userId,
+					name: user.name,
+					action: ' has logged out.'
 				});
 
 				// Wipe out the session (log out)
