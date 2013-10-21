@@ -61,3 +61,5 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 23](http://irlnathan.github.io/sailscasts/blog/2013/10/16/building-a-sails-application-ep23-adding-real-time-flash-messages-using-real-time-model-events/): In episode 23 you'll learn how to create real-time flash messages based upon real-time model events.
 
+- [Episode 24](http://irlnathan.github.io/sailscasts/blog/2013/10/21/building-a-sails-application-ep24-correcting-a-publishupdate-event-and-adding-a-policy-to-the-user-controllers-subscribe-action/): In episode 24 you'll correct and issue with passing user.name to the publishUpdate method and add a policy to subscribe action of user controller.
+
