@@ -63,3 +63,5 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 24](http://irlnathan.github.io/sailscasts/blog/2013/10/21/building-a-sails-application-ep24-correcting-a-publishupdate-event-and-adding-a-policy-to-the-user-controllers-subscribe-action/): In episode 24 you'll correct and issue with passing user.name to the publishUpdate method and add a policy to subscribe action of user controller.
 
+- [Episode 25](http://irlnathan.github.io/sailscasts/blog/2013/10/25/building-a-sails-application-ep25-what-is-commonjs-in-relation-to-node-what-does-it-do-how-do-i-use-it/): In episode 25 you'll learn what CommonJS is, what it does, and how to use it.
+
