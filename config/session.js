@@ -20,7 +20,10 @@ module.exports.session = {
 
   // In production, uncomment the following lines to set up a shared redis session store
   // that can be shared across multiple Sails.js servers
-  adapter: 'redis',
+
+// 
+
+  adapter: 'memory',
   //
   // The following values are optional, if no options are set a redis instance running
   // on localhost is expected.
@@ -28,11 +31,11 @@ module.exports.session = {
 
 
   //
-  host: process.env.REDIS_HOST, //'soldierfish.redistogo.com', // to the right of @
-  port: process.env.REDIS_PORT,//9599, // port found in heroku redis to go
-  // ttl: <redis session TTL in seconds>,
-  db: process.env.REDIS_DB, //'redistogo',
-  pass: process.env.REDIS_PASS //'d5d68502e87bf36e5d6d25d9c0f37b5a' //password is to the left of @
+  // host: process.env.REDIS_HOST, //'soldierfish.redistogo.com', // to the right of @
+  // port: process.env.REDIS_PORT,//9599, // port found in heroku redis to go
+  // // ttl: <redis session TTL in seconds>,
+  // db: process.env.REDIS_DB, //'redistogo',
+  // pass: process.env.REDIS_PASS //'d5d68502e87bf36e5d6d25d9c0f37b5a' //password is to the left of @
   // prefix: 'sess:'
 
 // you should REDIS_HOST

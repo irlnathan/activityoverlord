@@ -44,12 +44,12 @@ module.exports.sockets = {
   //
   // The data store where socket.io will store its message queue 
   // and answer pubsub logic
-  adapter: 'redis',
+  adapter: 'memory',
 
-  host: process.env.REDIS_HOST, //'soldierfish.redistogo.com', // to the right of @
-  port: process.env.REDIS_PORT,//9599, // port found in heroku redis to go
-  db: process.env.REDIS_DB, //'redistogo',
-  pass: process.env.REDIS_PASS, //'d5d68502e87bf36e5d6d25d9c0f37b5a' //password is to the left of @
+  // host: process.env.REDIS_HOST, //'soldierfish.redistogo.com', // to the right of @
+  // port: process.env.REDIS_PORT,//9599, // port found in heroku redis to go
+  // db: process.env.REDIS_DB, //'redistogo',
+  // pass: process.env.REDIS_PASS, //'d5d68502e87bf36e5d6d25d9c0f37b5a' //password is to the left of @
 
   //
   // To enable a remote redis pubsub server: 
