@@ -2,6 +2,8 @@
 ### a Sails application
 This is a part of a series of screencasts which build a sails application from scratch.  You can follow the progress over at my github [sailscasts](http://irlnathan.github.io/sailscasts/) page.
 
+A live version of the project is available at: (http://activityoverlord.herokuapp.com/)
+
 - [Episode 1](http://irlnathan.github.io/sailscasts/blog/2013/08/20/building-a-sails-application-ep1-installing-sails-and-create-initial-project/ "Episode 1"): goes over installing sails and creating the initial sails project. 
 
 - [Episode 2](http://irlnathan.github.io/sailscasts/blog/2013/08/21/building-a-sails-application-ep2-creating-a-sign-up-page/ "Episode 2"): Creating a Sign-up Page, ‘First-look’ at Routes, and Adding Twitter Bootstrap
@@ -65,3 +67,6 @@ This is a part of a series of screencasts which build a sails application from s
 
 - [Episode 25](http://irlnathan.github.io/sailscasts/blog/2013/10/25/building-a-sails-application-ep25-what-is-commonjs-in-relation-to-node-what-does-it-do-how-do-i-use-it/): In episode 25 you'll learn what CommonJS is, what it does, and how to use it.
 
+- [Episode 26](http://irlnathan.github.io/sailscasts/blog/2013/11/05/building-a-sails-application-ep26-deploying-a-sails-app-to-heroku/): In episode 25 you'll learn how to deploy a sails app to heroku.
+
+**Special Note:** A live version of the site is available at (activityoverlord.herokuapp.com)

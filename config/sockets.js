@@ -24,15 +24,15 @@ module.exports.sockets = {
  ],
 
   // HOSTED REDIS INSTANCE
-  adapter: 'redis',
+  // adapter: 'redis',
 
-  host: process.env.REDIS_HOST, 
-  port: process.env.REDIS_PORT,
-  db: process.env.REDIS_DB, 
-  pass: process.env.REDIS_PASS, 
+  // host: process.env.REDIS_HOST, 
+  // port: process.env.REDIS_PORT,
+  // db: process.env.REDIS_DB, 
+  // pass: process.env.REDIS_PASS, 
 
   // IN MEMORY
-  // adapter: 'memory',
+  adapter: 'memory',
 
   //
   // To enable a remote redis pubsub server: 

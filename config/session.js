@@ -23,17 +23,17 @@ module.exports.session = {
 
   //HOSTED REDIS INSTANCE 
 
-  adapter: 'redis',
+  // adapter: 'redis',
 
-  host: process.env.REDIS_HOST, 
-  port: process.env.REDIS_PORT,
-  // ttl: <redis session TTL in seconds>,
-  db: process.env.REDIS_DB, 
-  pass: process.env.REDIS_PASS 
+  // host: process.env.REDIS_HOST, 
+  // port: process.env.REDIS_PORT,
+  // // ttl: <redis session TTL in seconds>,
+  // db: process.env.REDIS_DB, 
+  // pass: process.env.REDIS_PASS 
   // prefix: 'sess:'
 
   // IN MEMORY
-  // adapter: 'memory',
+  adapter: 'memory',
 
   // Uncomment the following lines to use your Mongo adapter as a session store
   // adapter: 'mongo',
