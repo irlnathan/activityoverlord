@@ -69,4 +69,4 @@ A live version of the project is available at: (http://activityoverlord.herokuap
 
 - [Episode 26](http://irlnathan.github.io/sailscasts/blog/2013/11/05/building-a-sails-application-ep26-deploying-a-sails-app-to-heroku/): In episode 25 you'll learn how to deploy a sails app to heroku.
 
-**Special Note:** A live version of the site is available at (activityoverlord.herokuapp.com)
+**Special Note:** A live version of the site is available at (http://activityoverlord.herokuapp.com/)
