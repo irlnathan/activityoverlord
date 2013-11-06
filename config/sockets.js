@@ -23,33 +23,16 @@ module.exports.sockets = {
   'jsonp-polling'
  ],
 
+  // HOSTED REDIS INSTANCE
+  adapter: 'redis',
 
+  host: process.env.REDIS_HOST, 
+  port: process.env.REDIS_PORT,
+  db: process.env.REDIS_DB, 
+  pass: process.env.REDIS_PASS, 
 
-
-  // `adapter`
-  //
-  // Node.js (and consequently Sails.js) apps scale horizontally.
-  // It's a powerful, efficient approach, but it involves a tiny bit of planning.
-  // At scale, you'll want to be able to copy your app onto multiple Sails.js servers
-  // and throw them behind a load balancer.
-  //
-  // One of the big challenges of scaling an application is that these sorts of clustered 
-  // deployments cannot share memory, since they are on physically different machines.
-  // On top of that, there is no guarantee that a user will "stick" with the same server between
-  // requests, since the load balancer will route each request to the server with the 
-  // least impact on load. All pubsub processing and shared memory has to be offloaded
-  // to a shared, remote messaging queue (usually Redis)
-  //
-  // Luckily, Sails provides production MQ support for Redis by default!
-  //
-  // The data store where socket.io will store its message queue 
-  // and answer pubsub logic
-  adapter: 'memory',
-
-  // host: process.env.REDIS_HOST, //'soldierfish.redistogo.com', // to the right of @
-  // port: process.env.REDIS_PORT,//9599, // port found in heroku redis to go
-  // db: process.env.REDIS_DB, //'redistogo',
-  // pass: process.env.REDIS_PASS, //'d5d68502e87bf36e5d6d25d9c0f37b5a' //password is to the left of @
+  // IN MEMORY
+  // adapter: 'memory',
 
   //
   // To enable a remote redis pubsub server: 

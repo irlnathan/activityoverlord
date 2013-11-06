@@ -9,7 +9,7 @@
  * For more information on configuring the session, check out:
  * http://sailsjs.org/#documentation
  */
-
+//
 module.exports.session = {
 
   // Session secret is automatically generated when your new app is created
@@ -21,24 +21,19 @@ module.exports.session = {
   // In production, uncomment the following lines to set up a shared redis session store
   // that can be shared across multiple Sails.js servers
 
-// 
+  //HOSTED REDIS INSTANCE 
 
-  adapter: 'memory',
-  //
-  // The following values are optional, if no options are set a redis instance running
-  // on localhost is expected.
-  // Read more about options at: https://github.com/visionmedia/connect-redis
+  adapter: 'redis',
 
-
-  //
-  // host: process.env.REDIS_HOST, //'soldierfish.redistogo.com', // to the right of @
-  // port: process.env.REDIS_PORT,//9599, // port found in heroku redis to go
-  // // ttl: <redis session TTL in seconds>,
-  // db: process.env.REDIS_DB, //'redistogo',
-  // pass: process.env.REDIS_PASS //'d5d68502e87bf36e5d6d25d9c0f37b5a' //password is to the left of @
+  host: process.env.REDIS_HOST, 
+  port: process.env.REDIS_PORT,
+  // ttl: <redis session TTL in seconds>,
+  db: process.env.REDIS_DB, 
+  pass: process.env.REDIS_PASS 
   // prefix: 'sess:'
 
-// you should REDIS_HOST
+  // IN MEMORY
+  // adapter: 'memory',
 
   // Uncomment the following lines to use your Mongo adapter as a session store
   // adapter: 'mongo',
