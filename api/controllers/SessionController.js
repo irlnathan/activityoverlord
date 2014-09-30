@@ -35,7 +35,7 @@ module.exports = {
 			return;
 		}
 
-		// Try to find the user by there email address. 
+		// Try to find the user by their email address. 
 		// findOneByEmail() is a dynamic finder in that it searches the model by a particular attribute.
 		// User.findOneByEmail(req.param('email')).done(function(err, user) {
 		User.findOneByEmail(req.param('email'), function foundUser(err, user) {
