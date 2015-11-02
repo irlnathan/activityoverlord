@@ -15,7 +15,7 @@ A live version of the project is available at: (http://activityoverlord.herokuap
 
 - [Episode 3[Updated]](http://irlnathan.github.io/sailscasts/blog/2013/08/25/building-a-sails-application-ep3-update-creating-a-user-model-and-controller/): Creating a user model and controller, creating a sign-up page, 'first-look' at sails blueprints.
 
-- [Episode 4](http://localhost:4000/sailscasts/blog/2013/08/26/building-a-sails-application-ep4-creating-a-user-account/): Creating a user account and enabling csrf protection.
+- [Episode 4](http://irlnathan.github.io/sailscasts/blog/2013/08/26/building-a-sails-application-ep4-creating-a-user-account/): Creating a user account and enabling csrf protection.
 
 - [Episode 5](http://localhost:4000/sailscasts/blog/2013/08/27/building-a-sails-application-ep4-handling-validation-errors-with-a-flash-message/): Handling validation errors, creating a flash message and injecting it into the sign-up page.
 
