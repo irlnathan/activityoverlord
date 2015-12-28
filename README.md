@@ -17,9 +17,9 @@ A live version of the project is available at: (http://activityoverlord.herokuap
 
 - [Episode 4](http://irlnathan.github.io/sailscasts/blog/2013/08/26/building-a-sails-application-ep4-creating-a-user-account/): Creating a user account and enabling csrf protection.
 
-- [Episode 5](http://localhost:4000/sailscasts/blog/2013/08/27/building-a-sails-application-ep4-handling-validation-errors-with-a-flash-message/): Handling validation errors, creating a flash message and injecting it into the sign-up page.
+- [Episode 5](http://irlnathan.github.io/sailscasts/blog/2013/08/27/building-a-sails-application-ep4-handling-validation-errors-with-a-flash-message/): Handling validation errors, creating a flash message and injecting it into the sign-up page.
 
-- [Episode 6](http://localhost:4000/sailscasts/blog/2013/08/28/building-a-sails-application-ep5-creating-a-policy-and-adding-client-side-validation/): Creating a policy and adding client-side validation to the sign-up page.
+- [Episode 6](http://irlnathan.github.io/sailscasts/blog/2013/08/28/building-a-sails-application-ep5-creating-a-policy-and-adding-client-side-validation/): Creating a policy and adding client-side validation to the sign-up page.
 
 - [Episode 7](http://irlnathan.github.io/sailscasts/blog/2013/08/28/building-a-sails-application-ep7-adding-a-show-action-a-dot-k-a-a-profile-page/): Create a show action which will be our very humble profile page.
 
