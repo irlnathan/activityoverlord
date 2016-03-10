@@ -163,10 +163,10 @@ module.exports = {
       if (err) return next(err);
  
       // subscribe this socket to the User model classroom
-      User.subscribe(req.socket);
+      User.watch(req);
  
       // subscribe this socket to the user instance rooms
-      User.subscribe(req.socket, users);
+      User.subscribe(req, users);
  
       // This will avoid a warning from the socket for trying to render
       // html over the socket.
